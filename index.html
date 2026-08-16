@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="J4G Autoworks — performance, diagnostics and automotive services."/>
+    <title>J4G Autoworks</title>
+    <link rel="icon" type="image/png" href="/src/assets/brand-logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/src/css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="J4G Autoworks home">
+        <img src="/src/assets/brand-logo.jpg" class="brand-logo" alt="Logo" />
+      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a class="active" href="#home">HOME</a>
+        <a href="#services">Services</a>
+        <a href="#garage">GARAGE</a>
+        <a href="#about">ABOUT</a>
+
+        
+        <button
+          class="btn btn-secondary open-contact"
+          id=""
+          type="button"
+        >
+          BOOK A SERVICE
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero-background" aria-hidden="true">
+          <div class="hero-slide slide-1"></div>
+          <img src="/src/assets/hero-1.jpg" alt="Hero Image" />
+          <div class="hero-slide slide-2"></div>
+          <img src="/src/assets/hero-2.jpg" alt="Hero Image" />
+          <div class="hero-slide slide-3"></div>
+          <img src="/src/assets/hero-3.jpg" alt="Hero Image" />
+        </div>
+
+        <div class="hero-copy">
+          <h1>
+            ANY ADVENTURE, ANYWHERE
+          </h1>
+          <div class="hero-actions">
+            <button class="btn btn-primary open-contact" type="button">
+              BOOK A SERVICE
+            </button>
+            <a class="btn btn-secondary" href="#garage">
+              CHECK OUR BUILDS
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="section-heading reveal-section">
+          <p class="eyebrow">
+            <span></span>
+            WHAT WE DO
+          </p>
+          <h2>
+            JOIN THE ADVENTURE
+          </h2>
+          <p>
+            J4G Autoworks relentlessly pursues excellence. It’s what the outback calls for and what you deserve. We remain unwavering from our original course: quality, reliability and practicality above all else.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <article class="service-card service-suspension reveal-section">
+            <h3>Suspension Upgrades & Lift Kits</h3>
+            <div class="service-description">
+              <p class="description-preview">
+                Premium suspension and Lift kits systems
+              </p>
+              <p class="description-full">
+                Premium suspension and Lift kits systems engineered to increase ground clearance, maximize wheel travel, and improve overall ride quality while preserving safe, predictable handling geometry on both street and trail.          
+              </p>
+              <button class="see-more" type="button">
+              SEE MORE <span>+</span>
+            </button>
+            </div>
+          </article>
+
+          <article class="service-card service-wheels reveal-section">
+            <h3>Wheels & Tires</h3>
+            <div class="service-description">
+              <p class="description-preview">
+                Comprehensive sourcing, fitment analysis, mounting
+              </p>
+              <p class="description-full">
+                Comprehensive sourcing, fitment analysis, mounting and balancing of high-performance and terrain-specific wheels and tires meticulously matched to your vehicle's load ratings and driving demands.           
+              </p>
+              <button class="see-more" type="button">
+              SEE MORE <span>+</span>
+            </button>
+            </div>
+          </article>
+
+          <article class="service-card service-exhaust reveal-section">
+            <h3>Exhaust System</h3>
+            <div class="service-description">
+              <p class="description-preview">
+                Installation and optimization of high-flow exhaust systems
+              </p>
+              <p class="description-full">
+                Installation and optimization of high-flow exhaust systems designed to reduce backpressure, increase engine efficiency, and deliver a clean, resonant acoustic tone without annoying cabin drone.           
+              </p>
+              <button class="see-more" type="button">
+              SEE MORE <span>+</span>
+            </button>
+            </div>
+          </article>
+
+          <article class="service-card service-offroad reveal-section">
+            <h3>Off-roading Accessories</h3>
+            <div class="service-description">
+              <p class="description-preview">
+                 Precision installation of heavy-duty vehicle armor, recovery winches, reinforced bumpers
+              </p>
+              <p class="description-full">
+                Precision installation of heavy-duty vehicle armor, recovery winches, reinforced bumpers and overland storage solutions designed to protect your investment in the harshest remote environments.         
+              </p>
+              <button class="see-more" type="button">
+              SEE MORE <span>+</span>
+            </button>
+            </div>
+          </article>
+
+          <article class="service-card service-electrical reveal-section">
+            <h3>Electrical Systems</h3>
+            <div class="service-description">
+              <p class="description-preview">
+                Clean, reliable wiring and integration for high-output auxiliary lighting, 
+              </p>
+              <p class="description-full">
+                Clean, reliable wiring and integration for high-output auxiliary lighting, dual-battery setups, onboard air systems, and advanced power management controllers tailored for long-term durability.     
+              </p>
+              <button class="see-more" type="button">
+              SEE MORE <span>+</span>
+            </button>
+            </div>
+          </article>
+
+          <article class="service-card service-brakes reveal-section">
+            <h3>Brake & Underchassis Work</h3>
+            <div class="service-description">
+              <p class="description-preview">
+                Critical structural inspections, heavy-duty brake system upgrades
+              </p>
+              <p class="description-full">
+                Critical structural inspections, heavy-duty brake system upgrades and detailed undercarriage maintenance to guarantee maximum stopping power, component longevity, and occupant safety.
+              </p>
+              <button class="see-more" type="button">
+              SEE MORE <span>+</span>
+            </button>
+            </div>
+          </article>
+
+        </div>
+        <div class="service-brands reveal-section">
+          <div class="brands-heading">
+            <span></span>
+            <p>TRUSTED PERFORMANCE BRANDS</p>
+            <span></span>
+          </div>
+          <div class="brands-image">
+            <img
+              src="/src/assets/brands.png"
+              alt="Performance automotive brands"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section garage reveal-section" id="garage">
+        <div class="garage-layout">
+        <!-- LEFT SIDE GRID -->
+        <div class="garage-featured">
+          <img src="/src/assets/featured-build-left.jpg" alt="Featured Build"/>
+          <div class="garage-featured-content">
+            <span>FEATURED BUILD</span>
+            <h3>
+              DRIVE<br>
+              PASSION<br>
+              EXCELLENCE
+            </h3>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE GRID -->
+        <div class="garage-grid">
+          <article class="garage-card">
+            <img src="/src/assets/featured-build-right-1.jpg" alt="Featured Build"/>
+          </article>
+
+          <article class="garage-card">
+            <img src="/src/assets/featured-build-right-2.jpg" alt="Featured Build"/>          
+          </article>
+
+          <article class="garage-card">
+            <img src="/src/assets/featured-build-right-3.jpg" alt="Featured Build"/>
+          </article>
+
+          <article class="garage-card">
+            <img src="/src/assets/featured-build-right-4.jpg" alt="Featured Build"/>
+          </article>
+
+        </div>
+      </div>
+      </section>
+
+      <section class="section about reveal-section" id="about">
+          <div class="about-intro">
+            <div class="about-heading">
+              <p class="eyebrow">
+                <span></span>
+                ABOUT J4G AUTOWORKS
+              </p>
+              <h2>
+                We share your passion for exploration and experiencing the great outdoors.
+              </h2>
+            </div>
+            <div class="about-story">
+              <p>
+                J4G Autoworks came about in 2020 with a flagship store located in Tanauan City, Batangas. The shop specialized in selling and installing aftermarket offroad or all terrain upgrade and wheels&tires brought
+                about by the growing demand from the influx of new car models. The well-appointed offroad parts and accessories shop also became the perfect venue to
+                showcase J4G Autoworks' wide range of wheels to customers and dealers
+                alike.
+              </p>
+              <p>
+                In 2026, J4G Autoworks foresaw the emerging 4x4/Off-Road trend composed of pick-ups and SUVs.Brought about by severe weather conditions and unfavorable road
+                conditions, it became a popular daily driver for most people.
+              </p>
+
+              <p>
+              </p>
+            </div>
+          </div>
+
+          <div class="about-grid">
+
+            <div class="about-placeholder" aria-hidden="true">
+            </div>
+            <div class="about-placeholder" aria-hidden="true">
+            </div>
+
+          </div>
+      </section>
+
+      <section class="section contact hidden" id="contact">
+        <div class="overlay"></div>
+        
+        <div class="contact-card">
+          <button
+            class="close-section"
+            id="close-contact"
+            type="button"
+            aria-label="Close booking section"
+          >
+            &times;
+            <span></span>
+            <span></span>
+          </button>
+          <div>
+            <p class="eyebrow"><span></span> START A PROJECT</p>
+            <h2>
+              READY TO GET<br />
+              <strong>STARTED?</strong>
+            </h2>
+            <p>
+              Send your vehicle details and the service you need. J4G can follow
+              up with the next steps.
+            </p>
+          </div>
+
+          <form id="service-form">
+            <label>
+              NAME
+              <input name="name" type="text" placeholder="Your name" required/>
+            </label>
+
+            <label>
+              EMAIL
+              <input name="email" type="email" placeholder="you@example.com" required/>
+            </label>
+
+            <label>
+              VEHICLE
+              <input name="vehicle" type="text" placeholder="Year / Make / Model"/>
+            </label>
+
+            <label>
+              SERVICE
+              <select name="service">
+                <option>Suspension Upgrades & Lift Kits</option>
+                <option>Wheels & Tires</option>
+                <option>Exhaust System</option>
+                <option>Off-roading Accessories</option>
+                <option>Electrical Systems</option>
+                <option>Brake & Underchassis Work</option>
+              </select>
+            </label>
+
+            <label>
+              MESSAGE
+              <textarea name="message" rows="4" placeholder="Tell us what you need"></textarea>
+            </label>
+
+            <button class="btn btn-primary" type="submit">
+              REQUEST SERVICE
+            </button>
+            <p class="form-message" id="form-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">
+            <img src="/src/assets/brand-logo.jpg" alt="J4G Autoworks">
+          </a>
+          <p class="footer-tagline">
+            Building yours like it's ours
+          </p>
+          <p class="footer-description">
+            We help off-road & car enthusiasts build their dream rig.
+          </p>
+        </div>
+
+        <div class="footer-navigation">
+          <span class="footer-label">NAVIGATION</span>
+          <a href="#home">HOME</a>
+          <a href="#services">SERVICES</a>
+          <a href="#garage">GARAGE</a>
+          <a href="#about">ABOUT</a>
+        </div>
+
+        <div class="footer-contact">
+          <span class="footer-label">VISIT US</span>
+          <p>
+            Tanauan City,<br>
+            Batangas, Philippines
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © 2026 J4G AUTOWORKS. ALL RIGHTS RESERVED.
+        </p>
+
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/j4gautoworks?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==&igsi=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
+            <img src="/src/assets/instagram-1-svgrepo-com.svg" alt="">
+          </a>
+
+          <a href="https://www.facebook.com/J4GAutoworks" target="_blank" aria-label="Facebook">
+            <img src="/src/assets/facebook-color-svgrepo-com.svg" alt="">
+          </a>
+
+          <a href="tel:+639073400033" aria-label="Phone">
+            <img src="/src/assets/telephone-call-svgrepo-com.svg" alt="">
+          </a>
+
+          <a href="https://maps.app.goo.gl/miPNYfiYv4RjnFvYA" target="_blank" aria-label="Location">
+            <img src="/src/assets/location-pin-svgrepo-com.svg" alt="">
+          </a>
+        </div>
+        <span class="footer-credit">
+          J4G AUTOWORKS
+        </span>
+      </div>
+    </footer>
+    
+    <script src="/src/js/app.js"></script>
+  </body>
+</html>
