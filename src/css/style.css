@@ -901,28 +901,19 @@ textarea {
     }
   }
   .garage-featured-content {
-    position: relative;
-    min-height: 620px;
-    overflow: hidden;
-    background: #151619;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    isolation: isolate;
-    opacity: 0;
-    transform: translateX(-120px);
-
-    transition:
-      opacity 0.8s ease,
-      transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    position: absolute;         
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2.5rem;
+    z-index: 1; 
 
     & > span {
       display: flex;
       align-items: center;
       gap: 0.65rem;
-
       margin-bottom: 1.2rem;
-
       color: #fff;
-
       font-family: "JetBrains Mono", monospace;
       font-size: 0.68rem;
       font-weight: 700;
@@ -1592,10 +1583,7 @@ textarea {
         min-height: 480px;
       }
       .garage-featured-content {
-        left: 1.25rem;
-        right: 1.25rem;
-        bottom: 1.5rem;
-
+      
         h3 {
           font-size: clamp(1.8rem, 10vw, 2.5rem);
           line-height: 0.87;
