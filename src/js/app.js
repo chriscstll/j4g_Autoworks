@@ -134,7 +134,7 @@ const baseConfig = {
   duration: 1000,
   distance: '60px',
   easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
-  reset: true 
+  reset: false 
 };
 
 ScrollReveal().reveal('.reveal-top', { ...baseConfig, origin: 'top', delay: 200 });
