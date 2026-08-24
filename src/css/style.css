@@ -873,11 +873,6 @@ textarea {
     background: #151619;
     border: 1px solid rgba(255, 255, 255, 0.12);
     isolation: isolate;
-    opacity: 0;
-    transform: translateX(-120px);
-    transition:
-      opacity 0.8s ease,
-      transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 
     img {
       position: absolute;
@@ -952,11 +947,6 @@ textarea {
     grid-template-rows: repeat(2, minmax(0, 1fr));
     gap: 2px;
     background: rgba(255, 255, 255, 0.12);
-    opacity: 0;
-    transform: translateX(120px);
-    transition:
-      opacity 0.8s ease,
-      transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 
     .garage-card {
       position: relative;
@@ -1208,17 +1198,6 @@ textarea {
       }
     }
   }
-}
-
-.reveal-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
-
-    &.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
 }
 
 @media (min-width: 1025px) {
@@ -1729,7 +1708,7 @@ textarea {
       .hero-slide.slide-1 {
         opacity: 1;
       }
-      .reveal-section,
+      
       .garage-featured,
       .garage-grid {
         opacity: 1;
@@ -1743,4 +1722,12 @@ body.booking-open {
     transform: translate3d(0, -110%, 0) !important;
     pointer-events: none;
   }
+}
+
+.html.sr .reveal-top,
+.html.sr .reveal-left,
+.html.sr .reveal-right,
+.html.sr .reveal-scale,
+.html.sr .reveal-card {
+  visibility: hidden;
 }

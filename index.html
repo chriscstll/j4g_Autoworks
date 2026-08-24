@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="/src/css/style.css" />
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
   </head>
 
   <body>
@@ -57,14 +58,14 @@
         </div>
 
         <div class="hero-copy">
-          <h1>
+          <h1 class="reveal-scale">
             ANY ADVENTURE, ANYWHERE
           </h1>
-          <div class="hero-actions">
+          <div class="hero-actions reveal-left">
             <button class="btn btn-primary open-contact" type="button">
               BOOK A SERVICE
             </button>
-            <a class="btn btn-secondary" href="#garage">
+            <a class="btn btn-secondary reveal-right" href="#garage">
               CHECK OUR BUILDS
             </a>
           </div>
@@ -72,7 +73,7 @@
       </section>
 
       <section class="section services" id="services">
-        <div class="section-heading reveal-section">
+        <div class="section-heading reveal-scale">
           <p class="eyebrow">
             <span></span>
             WHAT WE DO
@@ -87,7 +88,7 @@
 
         <div class="service-grid">
 
-          <article class="service-card service-suspension reveal-section">
+          <article class="service-card service-suspension reveal-card">
             <h3>Suspension Upgrades & Lift Kits</h3>
             <div class="service-description">
               <p class="description-preview">
@@ -102,7 +103,7 @@
             </div>
           </article>
 
-          <article class="service-card service-wheels reveal-section">
+          <article class="service-card service-wheels reveal-card">
             <h3>Wheels & Tires</h3>
             <div class="service-description">
               <p class="description-preview">
@@ -117,7 +118,7 @@
             </div>
           </article>
 
-          <article class="service-card service-exhaust reveal-section">
+          <article class="service-card service-exhaust reveal-card">
             <h3>Exhaust System</h3>
             <div class="service-description">
               <p class="description-preview">
@@ -132,7 +133,7 @@
             </div>
           </article>
 
-          <article class="service-card service-offroad reveal-section">
+          <article class="service-card service-offroad reveal-card">
             <h3>Off-roading Accessories</h3>
             <div class="service-description">
               <p class="description-preview">
@@ -147,7 +148,7 @@
             </div>
           </article>
 
-          <article class="service-card service-electrical reveal-section">
+          <article class="service-card service-electrical reveal-card">
             <h3>Electrical Systems</h3>
             <div class="service-description">
               <p class="description-preview">
@@ -162,7 +163,7 @@
             </div>
           </article>
 
-          <article class="service-card service-brakes reveal-section">
+          <article class="service-card service-brakes reveal-card">
             <h3>Brake & Underchassis Work</h3>
             <div class="service-description">
               <p class="description-preview">
@@ -178,13 +179,13 @@
           </article>
 
         </div>
-        <div class="service-brands reveal-section">
-          <div class="brands-heading">
+        <div class="service-brands">
+          <div class="brands-heading reveal-scale">
             <span></span>
             <p>TRUSTED PERFORMANCE BRANDS</p>
             <span></span>
           </div>
-          <div class="brands-image">
+          <div class="brands-image reveal-top">
             <img
               src="/src/assets/brands.png"
               alt="Performance automotive brands"
@@ -193,12 +194,12 @@
         </div>
       </section>
 
-      <section class="section garage reveal-section" id="garage">
+      <section class="section garage" id="garage">
         <div class="garage-layout">
         <!-- LEFT SIDE GRID -->
-        <div class="garage-featured">
+        <div class="garage-featured reveal-scale">
           <img src="/src/assets/featured-build-left.jpg" alt="Featured Build"/>
-          <div class="garage-featured-content">
+          <div class="garage-featured-content reveal-left">
             <span>FEATURED BUILD</span>
             <h3>
               DRIVE<br>
@@ -210,19 +211,19 @@
 
         <!-- RIGHT SIDE GRID -->
         <div class="garage-grid">
-          <article class="garage-card">
+          <article class="garage-card reveal-card">
             <img src="/src/assets/featured-build-right-1.jpg" alt="Featured Build"/>
           </article>
 
-          <article class="garage-card">
+          <article class="garage-card reveal-card">
             <img src="/src/assets/featured-build-right-2.jpg" alt="Featured Build"/>          
           </article>
 
-          <article class="garage-card">
+          <article class="garage-card reveal-card">
             <img src="/src/assets/featured-build-right-3.jpg" alt="Featured Build"/>
           </article>
 
-          <article class="garage-card">
+          <article class="garage-card reveal-card">
             <img src="/src/assets/featured-build-right-4.jpg" alt="Featured Build"/>
           </article>
 
@@ -230,9 +231,9 @@
       </div>
       </section>
 
-      <section class="section about reveal-section" id="about">
+      <section class="section about" id="about">
           <div class="about-intro">
-            <div class="about-heading">
+            <div class="about-heading reveal-scale">
               <p class="eyebrow">
                 <span></span>
                 ABOUT J4G AUTOWORKS
@@ -241,7 +242,7 @@
                 We share your passion for exploration and experiencing the great outdoors.
               </h2>
             </div>
-            <div class="about-story">
+            <div class="about-story reveal-right">
               <p>
                 J4G Autoworks came about in 2020 with a flagship store located in Tanauan City, Batangas. The shop specialized in selling and installing aftermarket offroad or all terrain upgrade and wheels&tires brought
                 about by the growing demand from the influx of new car models. The well-appointed offroad parts and accessories shop also became the perfect venue to
