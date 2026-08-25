@@ -160,7 +160,7 @@ seeMoreButtons.forEach((button) => {
 // BOOKING FORM
 const serviceForm = document.querySelector("#service-form");
 const formMessage = document.querySelector("#form-message");
-const GOOGLE_SCRIPT_URL = "WEB APP URL/APPS SCRIPT DEPLOY URL... SEE FILE BELOW";
+
 
 serviceForm?.addEventListener("submit", async function (event) {
   event.preventDefault();
@@ -178,91 +178,49 @@ serviceForm?.addEventListener("submit", async function (event) {
 
   submitButton.disabled = true;
   submitButton.textContent = "SENDING...";
+  submitButton.classList.add("sending");
   formMessage.textContent = "";
   formMessage.className = "form-message";
 
   try {
-    await fetch(GOOGLE_SCRIPT_URL, {
+    await fetch("https://script.google.com/macros/s/AKfycbx8954e2FXgyPwl0dR1AMkriBXdR66nY0SywlSfA9MXQizIIxBplB4NnHIJyR8HMuoszA/exec", {
       method: "POST",
       mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(bookingData),
     });
+
+    submitButton.textContent = "SENT";
+    submitButton.classList.remove("sending");
+    submitButton.classList.add("sent");
     formMessage.textContent = "REQUEST RECEIVED — WE'LL BE IN TOUCH SOON.";
     formMessage.classList.add("success");
     serviceForm.reset();
+    setTimeout(() => {
+      closeContact();
+      formMessage.textContent = "";
+      formMessage.className = "form-message";
+    }, 2000); 
+
   } catch (error) {
     console.error("Booking error:", error);
     formMessage.textContent = "UNABLE TO SEND REQUEST — PLEASE TRY AGAIN.";
     formMessage.classList.add("error");
-  } finally {
-    submitButton.disabled = false;
     submitButton.textContent = "REQUEST SERVICE";
+    submitButton.classList.remove("sending");
+    submitButton.disabled = false;
+
+  } finally {
+    setTimeout(() => {
+      submitButton.textContent = "REQUEST SERVICE";
+      submitButton.classList.remove("sending", "sent");
+      submitButton.disabled = false;
+    }, 3000);
   }
 });
 
 
-//    TO BE PUT AT APPS SCRIPT
-/* const SHEET_NAME = "Bookings";
+//    GOOGLE ACCOUNT 
+// Email: jgautoworks11@gmail.com
+// Password: @j4g-admin
 
-function doPost(e) {
-  try {
-    const sheet =
-      SpreadsheetApp
-        .getActiveSpreadsheet()
-        .getSheetByName(SHEET_NAME);
-
-    if (!sheet) {
-      throw new Error(`Sheet "${SHEET_NAME}" was not found.`);
-    }
-
-    if (!e || !e.postData || !e.postData.contents) {
-      throw new Error("No booking data received.");
-    }
-
-    const data = JSON.parse(e.postData.contents);
-
-    if (!data.name || !data.email || !data.service) {
-      throw new Error("Required booking information is missing.");
-    }
-
-    if (data.website) {
-      throw new Error("Spam detected.");
-    }
-
-    sheet.appendRow([
-      new Date(),
-      data.name,
-      data.email,
-      data.vehicle || "",
-      data.service,
-      data.message || "",
-      "New",
-    ]);
-
-    return ContentService
-      .createTextOutput(
-        JSON.stringify({
-          success: true,
-          message: "Booking submitted successfully.",
-        })
-      )
-      .setMimeType(
-        ContentService.MimeType.JSON
-      );
-
-  } catch (error) {
-
-    return ContentService
-      .createTextOutput(
-        JSON.stringify({
-          success: false,
-          message: error.message,
-        })
-      )
-      .setMimeType(
-        ContentService.MimeType.JSON
-      );
-  }
-} */
-
-  

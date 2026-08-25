@@ -201,6 +201,34 @@ body {
           box-shadow: none;
         }
       }
+
+      @keyframes shimmer-send {
+        0%   { transform: translateX(-120%); }
+        100% { transform: translateX(120%); }
+      }
+
+      .btn-primary.sending {
+        background: transparent;
+        border-color: var(--red);
+        color: #fff;
+        pointer-events: none;
+        box-shadow: 0 0 18px rgba(255, 0, 0, 0.2);
+
+        &::before {
+          animation: shimmer-send 0.9s ease infinite;
+        }
+      }
+
+      .btn-primary.sent {
+        background: transparent;
+        border-color: rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.6);
+        pointer-events: none;
+
+        &::before {
+          transform: translateX(120%);
+        }
+      }
 }
 
 .site-header {
@@ -506,7 +534,7 @@ body {
     .form-message {
       grid-column: 1 / -1;
       margin: 0;
-      color: var(--red-bright);
+      color: var(--off-white);
       font: 0.7rem JetBrains Mono, monospace;
     }
 
@@ -530,8 +558,9 @@ body {
     padding: 1.5rem;
     background: #151619;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    border-top: 3px solid var(--red);
     border-radius: 4px;
+
+      
 
     & > div:first-of-type {
         padding-right: 3.5rem;
