@@ -10,38 +10,37 @@ const contactOverlay = document.querySelector("#contact .overlay");
 
 
 // OPEN AND CLOSE NAV
-let navHistoryState = false;
+let navOpen = false;
 
 function closeNav() {
   nav?.classList.remove("open");
   menuToggle?.setAttribute("aria-expanded", "false");
-}
-
-function closeNavAndPopHistory() {
-  closeNav();
-  if (navHistoryState) {
-    history.back();
-    navHistoryState = false;
-  }
+  navOpen = false;
 }
 
 function toggleNav() {
-  const isOpen = nav?.classList.toggle("open") ?? false;
-  menuToggle?.setAttribute("aria-expanded", String(isOpen));
-  if (isOpen && !navHistoryState) {
+  navOpen = !navOpen;
+  nav?.classList.toggle("open", navOpen);
+  menuToggle?.setAttribute("aria-expanded", String(navOpen));
+  if (navOpen) {
     history.pushState({ mobileNav: true }, "");
-    navHistoryState = true;
   }
 }
 menuToggle?.addEventListener("click", toggleNav);
-
 navLinks.forEach((link) => {
-  link.addEventListener("click", closeNavAndPopHistory); 
+  link.addEventListener("click", closeNav);
 });
 
-window.addEventListener("popstate", () => {
-  navHistoryState = false;
-  closeNav();
+window.addEventListener("popstate", (event) => {
+  if (navOpen) {
+    closeNav();
+  }
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && navOpen) {
+    closeNav();
+    history.back();
+  }
 });
 
 
